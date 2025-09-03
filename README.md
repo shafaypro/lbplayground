@@ -15,3 +15,8 @@ This project will use the following tools and technologies:
 * **Apache Airflow** – Workflow orchestration
 * **DuckDB** – Embedded analytics database
 * **Metabase** – Data visualization and BI
+
+
+
+## TODO
+-> action plan first (write on the readme what an action plan would be and then move to a refined flow.)
