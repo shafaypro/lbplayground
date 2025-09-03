@@ -216,4 +216,3 @@ src/assignment/
 # The ignore for the duckdb files.
 
 *.duckdb
-/output/*.duckdb
