@@ -1,0 +1,29 @@
+name: Black Formatting tetsing for Python
+
+on:
+  push:
+    paths:
+      - '**.py'
+  pull_request:
+    paths:
+      - '**.py'
+
+jobs:
+  black-check:
+    name: Check Python Code Style with Black
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Black
+        run: pip install black
+
+      - name: Run Black (check only)
+        run: black --check .
