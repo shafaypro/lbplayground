@@ -21,7 +21,8 @@ This project will serve as a structured playground to experiment with modern dat
 - Data dictionary understanding – Dimensional/Fact or DL/Layer, or relevant feasible requirements (modelling understanding)  
 - Airflow infra setup  
 - Governance tags inside Airflow  
-- DuckDB infra setup  
+- Data Quality (Great Expectation)
+- DuckDB infra setup  (maybe polars but seems like duckdb is recommendation)
 - Metabase report (KPIs on top of SQL queries or required assignment reports)  
 - Recreatable reports/dashboards that can be manipulated or viewed by end users  
 
