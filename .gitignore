@@ -212,3 +212,7 @@ __marimo__/
 
 assignment/
 src/assignment/
+
+# The ignore for the duckdb files.
+
+*.duckdb
