@@ -21,7 +21,7 @@ This project will serve as a structured playground to experiment with modern dat
 - Data dictionary understanding – Dimensional/Fact or DL/Layer, or relevant feasible requirements (modelling understanding)  
 - Airflow infra setup  
 - Development Governance tags inside Airflow  
-= Data Goverance (I mean we have limited time but we can try to cover some stuff)
+- Data Goverance (I mean we have limited time but we can try to cover some stuff)
 - Data Quality (Great Expectation)
 - DuckDB infra setup  (maybe polars but seems like duckdb is recommendation)
 - Metabase report (KPIs on top of SQL queries or required assignment reports)  
