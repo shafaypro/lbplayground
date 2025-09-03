@@ -14,13 +14,14 @@ This project will use the following tools and technologies:
 
 ## 📌 Action Plan
 This project will serve as a structured playground to experiment with modern data engineering and analytics practices. The focus areas will include:
-
+- Setup CI/CD (Dev git Actions for code reviews/pr/quality etc)
 - Containerization skeleton (for different tech stack)  
 - Implementation and local testing for the skeleton of the tech stack  
 - Analysis of dataset through Metabase and direct inferences  
 - Data dictionary understanding – Dimensional/Fact or DL/Layer, or relevant feasible requirements (modelling understanding)  
 - Airflow infra setup  
-- Governance tags inside Airflow  
+- Development Governance tags inside Airflow  
+= Data Goverance (I mean we have limited time but we can try to cover some stuff)
 - Data Quality (Great Expectation)
 - DuckDB infra setup  (maybe polars but seems like duckdb is recommendation)
 - Metabase report (KPIs on top of SQL queries or required assignment reports)  
