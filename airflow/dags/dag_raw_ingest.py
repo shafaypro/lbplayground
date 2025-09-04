@@ -21,10 +21,10 @@ with DAG(
     dag_id=dag_id,
     default_args=default_args,
     description="Raw ingestion of LB JSONL into DuckDB",
-    schedule_interval="@daily",   # kicks off daily
+    schedule_interval="@daily",  # kicks off daily
     start_date=days_ago(1),
     catchup=False,
-    tags=["duckdb","listenbrainz","raw"],
+    tags=["duckdb", "listenbrainz", "raw"],
 ) as dag:
 
     raw_load = PythonOperator(

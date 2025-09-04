@@ -24,7 +24,7 @@ with DAG(
     schedule=[RAW_DATASET],  # triggered by raw ingestion
     start_date=days_ago(1),
     catchup=False,
-    tags=["duckdb","lbplayground","staging","curated", "dataengineering"],
+    tags=["duckdb", "lbplayground", "staging", "curated", "dataengineering"],
 ) as dag:
 
     stage_listens = PythonOperator(

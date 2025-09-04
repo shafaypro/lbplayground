@@ -9,6 +9,7 @@ SQL_DIR = pathlib.Path("/opt/airflow/sql")
 DATA_GLOB = os.getenv("DATA_GLOB", "/opt/data/ds.jsonl")
 SOURCE_FILTER = os.getenv("SOURCE_FILTER", "spotify")
 
+
 def run_sql_file(relpath: str) -> None:
     """
     Read a SQL file from /opt/airflow/sql/<relpath>, substitute simple placeholders,
@@ -16,9 +17,8 @@ def run_sql_file(relpath: str) -> None:
     """
     path = SQL_DIR / relpath
     sql = path.read_text()
-    sql = (
-        sql.replace("{{DATA_GLOB}}", DATA_GLOB)
-           .replace("{{SOURCE_FILTER}}", SOURCE_FILTER)
+    sql = sql.replace("{{DATA_GLOB}}", DATA_GLOB).replace(
+        "{{SOURCE_FILTER}}", SOURCE_FILTER
     )
     con = duckdb.connect(DUCKDB_PATH)
     try:

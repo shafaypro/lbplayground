@@ -10,7 +10,8 @@ SELECT
     lf.listened_ts,
     lf.listened_date,
     lf.source
-FROM staging.listens_flat lf
-LEFT JOIN production_curated.dim_user du
-  ON lf.user_id = du.user_id
- AND du.is_current = TRUE;
+FROM staging.listens_flat AS lf
+LEFT JOIN production_curated.dim_user AS du
+    ON
+        lf.user_id = du.user_id
+        AND du.is_current = TRUE;

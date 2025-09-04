@@ -9,6 +9,7 @@ from master_dag_datasets import CURATED_DATASET
 from airflow.operators.python import PythonOperator
 import shutil
 
+
 def snapshot_duckdb():
     src = "/opt/duckdb/warehouse/lb.duckdb"
     dst = "/opt/duckdb/warehouse/lb_ro.duckdb"
@@ -34,9 +35,9 @@ with DAG(
     schedule=[CURATED_DATASET],  # triggered by curated output
     start_date=days_ago(1),
     catchup=False,
-    tags=["duckdb","listenbrainz","marts","reporting"],
-    max_active_runs=1,             # ← serialize runs
-    concurrency=1,                 # ← serialize tasks within this DAG (optional but helps)
+    tags=["duckdb", "listenbrainz", "marts", "reporting"],
+    max_active_runs=1,  # ← serialize runs
+    concurrency=1,  # ← serialize tasks within this DAG (optional but helps)
 ) as dag:
 
     mart_user_activity = PythonOperator(
@@ -70,12 +71,20 @@ with DAG(
     start = DummyOperator(task_id="start")
     marting_success = DummyOperator(task_id="marting_success")
     end = DummyOperator(task_id="end")
-    
+
     # Add task
     snapshot_task = PythonOperator(
         task_id="snapshot_duckdb_ro",
         python_callable=snapshot_duckdb,
     )
 
-    start >> mart_user_activity >> mart_track_perf >> marting_success >> report_tasks >> snapshot_task >> end
-    #[mart_user_activity, mart_track_perf] >> report_tasks
+    (
+        start
+        >> mart_user_activity
+        >> mart_track_perf
+        >> marting_success
+        >> report_tasks
+        >> snapshot_task
+        >> end
+    )
+    # [mart_user_activity, mart_track_perf] >> report_tasks

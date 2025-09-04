@@ -10,7 +10,11 @@ WITH ranked AS (
     FROM staging.listens_flat
     GROUP BY user_id, listened_date
 )
-SELECT user_id, listened_date, listens
+
+SELECT
+    user_id,
+    listened_date,
+    listens
 FROM ranked
 WHERE rn <= 3
-ORDER BY user_id, listens DESC;
+ORDER BY user_id ASC, listens DESC;
