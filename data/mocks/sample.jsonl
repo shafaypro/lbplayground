@@ -1,0 +1,5 @@
+{"user_id":"u1","user_name":"Shafay","track_id":"t1","track_name":"Song A","artist_name":"Artist X","listened_at":1551398400,"additional_info":{"source":"spotify"}}
+{"user_id":"u1","user_name":"Shafay","track_id":"t2","track_name":"Song B","artist_name":"Artist Y","listened_at":1551484800,"additional_info":{"source":"spotify"}}
+{"user_id":"u2","user_name":"Carlos","track_id":"t1","track_name":"Song A","artist_name":"Artist X","listened_at":1551398400,"additional_info":{"source":"spotify"}}
+{"user_id":"u2","user_name":"Candy","track_id":"t3","track_name":"Song C","artist_name":"Artist Z","listened_at":1551571200,"additional_info":{"source":"spotify"}}
+{"user_id":"u3","user_name":"Speedy","track_id":"t2","track_name":"Song B","artist_name":"Artist Y","listened_at":1551398400,"additional_info":{"source":"spotify"}}

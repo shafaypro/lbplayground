@@ -216,3 +216,10 @@ src/assignment/
 # The ignore for the duckdb files.
 
 *.duckdb
+/opt/
+metabase_plugins/
+
+airflow/logs/
+
+# Ignore specific file inside data/
+data/ds.jsonl
