@@ -1,6 +1,7 @@
-FROM metabase/metabase:v0.47.9
+# FROM metabase/metabase:latest
 
-# Install libstdc++ so DuckDB native library can load
-USER root
-RUN apk add --no-cache libstdc++
-USER metabase
+# # Install libstdc++ so DuckDB native library can load
+# USER root
+# RUN apk add --no-cache libstdc++
+
+# # Stay as root (no USER switch)

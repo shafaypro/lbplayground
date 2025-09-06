@@ -9,7 +9,7 @@ import duckdb
 con = duckdb.connect("/opt/duckdb/warehouse/lb.duckdb")
 
 # schemas & tables
-print(con.execute("SHOW SCHEMAS").fetchall())
+
 print(con.execute("SHOW TABLES FROM raw").fetchall())
 
 # peek raw rows
@@ -52,8 +52,19 @@ print(con.execute("SELECT * FROM reporting.report_users_on_2019_03_01").fetchdf(
 print(con.execute("SELECT * FROM reporting.report_first_song_per_user LIMIT 10").fetchdf())
 print(con.execute("SELECT * FROM reporting.report_top3_days_per_user LIMIT 10").fetchdf())
 print(con.execute("SELECT * FROM reporting.report_daily_active_users LIMIT 10").fetchdf())
+
+print(con.execute("SELECT COUNT(*) FROM reporting.report_daily_active_users").fetchall())
+
+print(con.execute("SELECT COUNT(*) FROM reporting.report_first_song_per_user").fetchall())
+
+print(con.execute("SELECT COUNT(*) FROM reporting.report_top3_days_per_user").fetchall())
+
+print(con.execute("SELECT COUNT(*) FROM reporting.report_top10_users").fetchall())
+
+print(con.execute("SELECT COUNT(*) FROM reporting.report_users_on_2019_03_01").fetchall())
+
 ```
 
 ## Metabase
-
-Point Metabase to `/duck/lb.duckdb` and build a small dashboard from the `reporting` schema.
+Its recommended to use the lb_ro onlyh one not the original duckdb file.
+Point Metabase to `/duck/lb_ro.duckdb` and build a small dashboard from the `reporting` schema.
