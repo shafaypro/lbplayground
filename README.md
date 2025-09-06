@@ -218,6 +218,8 @@ cd lbplayground
 
 Create `.env`:
 
+NOTE: the original file i renamed to `ds.jsonl` instead of `data.txt` (this should be inside the data folder as speified(in the same level of readme.md)) !!
+
 ```env
 DUCKDB_PATH=/opt/duckdb/warehouse/lb.duckdb
 DATA_GLOB=/opt/data/*.jsonl
