@@ -75,6 +75,10 @@ lbplayground/
 
 ## 🏗️ Architecture
 
+Please find the below archtiecutre made for this, usually there is an exacly draw file attached in the repo.
+
+  ![Architecture](wiki/images/smallarchitecture.png)
+
 We follow a **layered Lakehouse approach** with **hybrid dimensional modeling**:
 
 * **Raw Layer** – `raw.listens_jsonl` (JSON ingestion)
