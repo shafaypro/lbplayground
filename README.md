@@ -284,4 +284,4 @@ While this repo runs **locally with DuckDB + Airflow + Streamlit**, the architec
 
 ---
 
-## ⚡ This playground demonstrates how **raw event data** evolves into **analytics-ready insights** through **Airflow + DuckDB + Streamlit** — end-to-end, reproducible, and production-inspired.
+## ⚡ This playground demonstrates how **raw event data** evolves into **analytics-ready insights** through **Airflow + DuckDB + Streamlit** — end-to-end, reproducible, and production-inspired. (just for learning purposes)
