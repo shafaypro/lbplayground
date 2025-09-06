@@ -57,5 +57,10 @@ with DAG(
         )
 
     end = DummyOperator(task_id="end")
-
-    start >> dq_tasks >> end
+    snapshots = PythonOperator(
+        task_id="curated_snapshots_user_activity",
+        python_callable=run_sql_file,
+        op_args=["production/curated/snapshots_user_activity.sql"],
+        outlets=[CURATED_DATASET],  # signals downstream DAGs
+    )
+    start >> dq_tasks >> end >> snapshots
