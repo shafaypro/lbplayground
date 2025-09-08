@@ -1,5 +1,6 @@
 import os
 import pathlib
+
 import duckdb
 
 # Environment-driven config (populated from your .env via docker-compose)

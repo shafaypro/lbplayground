@@ -1,13 +1,14 @@
 import os
-from airflow import DAG
-from airflow.operators.python import PythonOperator
-from airflow.utils.dates import days_ago
+import shutil
 from datetime import timedelta
+
 from _utils import run_sql_file
 from airflow.operators.dummy import DummyOperator
-from master_dag_datasets import CURATED_DATASET
 from airflow.operators.python import PythonOperator
-import shutil
+from airflow.utils.dates import days_ago
+from master_dag_datasets import CURATED_DATASET
+
+from airflow import DAG
 
 
 def snapshot_duckdb():
