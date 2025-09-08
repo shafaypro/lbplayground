@@ -3,6 +3,9 @@
 This project implements a **production-inspired data pipeline** for the [ListenBrainz](https://listenbrainz.org/) dataset.
 It combines **modern orchestration (Airflow)**, **SQL-first transformations (DuckDB)**, and **lightweight BI (Streamlit)** into a reproducible **Lakehouse-style architecture**.
 
+
+The other usecase is referenced in a seperate readme file called [System Design](systemdesign.md)
+
 ---
 
 ## ✅ Action Plan (Progress Tracker)
