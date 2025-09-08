@@ -1,7 +1,8 @@
-import streamlit as st
+from typing import List, Optional
+
 import duckdb
 import pandas as pd
-from typing import List, Optional
+import streamlit as st
 
 # -------------------------------
 # Page Config

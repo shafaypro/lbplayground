@@ -1,10 +1,12 @@
 import os
-from airflow import DAG
+from datetime import timedelta
+
+from _utils import run_sql_file
 from airflow.operators.python import PythonOperator
 from airflow.utils.dates import days_ago
-from datetime import timedelta
-from _utils import run_sql_file
-from master_dag_datasets import RAW_DATASET, CURATED_DATASET
+from master_dag_datasets import CURATED_DATASET, RAW_DATASET
+
+from airflow import DAG
 
 dag_id = os.path.splitext(os.path.basename(__file__))[0]
 
